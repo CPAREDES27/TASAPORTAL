@@ -73,7 +73,6 @@ public class CallBAPI {
 	}
 
 
-	
 	@GetMapping(path="/bapi", produces = "application/json; charset=UTF-8")
 	public String getAssignments() {
 
