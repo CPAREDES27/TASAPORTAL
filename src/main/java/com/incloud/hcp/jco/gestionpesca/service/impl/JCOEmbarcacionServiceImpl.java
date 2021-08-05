@@ -18,25 +18,25 @@ public class JCOEmbarcacionServiceImpl implements JCOEmbarcacionService {
     public List<EmbarcacionDto> listaEmbarcacion(String condicion) throws Exception {
 
         List<EmbarcacionDto> listaEmbarcacion = new ArrayList<EmbarcacionDto>();
-        logger.error("PRUEBA_1");;
+        logger.error("listaEmbarcacion_1");;
         JCoDestination destination = JCoDestinationManager.getDestination("TASA_DEST_RFC");
         //JCo
-        logger.error("PRUEBA_2");;
+        logger.error("listaEmbarcacion_2");;
         JCoRepository repo = destination.getRepository();
-        logger.error("PRUEBA_3");;
+        logger.error("listaEmbarcacion_3");;
         JCoFunction stfcConnection = repo.getFunction("ZFL_RFC_CONS_EMBARCA");
         JCoParameterList importx = stfcConnection.getImportParameterList();
         //stfcConnection.getImportParameterList().setValue("P_USER","FGARCIA");
-        importx.setValue("P_USER", "FGARCIA");
-        logger.error("PRUEBA_4");;
+        importx.setValue("P_USER", "XTS");
+        logger.error("listaEmbarcacion_4");;
         JCoParameterList tables = stfcConnection.getTableParameterList();
         JCoTable tableImport = tables.getTable("P_OPTIONS");
         tableImport.appendRow();
-        logger.error("PRUEBA_5");;
-        tableImport.setValue("WA", condicion);
+        logger.error("listaEmbarcacion_5");;
+        //tableImport.setValue("WA", condicion);
         //Ejecutar Funcion
         stfcConnection.execute(destination);
-        logger.error("PRUEBA_6");
+        logger.error("listaEmbarcacion_6");
         //DestinationAcce
 
         //Recuperar Datos de SAP

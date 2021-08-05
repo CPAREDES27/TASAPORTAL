@@ -9,7 +9,7 @@ applications:
   disk-quota: 1G
   routes:
   - route: flotabackendqas.cfapps.us10.hana.ondemand.com
-
+   
   env:
     USE_JCO: true
     # # Accept any OAuth client of any identity zone
